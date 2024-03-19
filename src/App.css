@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.drop{
+  color: #70c373;
+}
+
+.logo{
+  width: 30%;
+  margin-right: 15px;
+}
+
+.hero1, .hero2, .hero3{
+  display: flex;
+align-items: center;
+}
+
+@media screen and (max-width: 768px){
+  .custom-navbar{
+    padding: 5px 20px;
+  }
+}
