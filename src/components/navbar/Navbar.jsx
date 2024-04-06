@@ -1,11 +1,14 @@
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
+import { SearchIcon } from '@chakra-ui/icons';
+
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import swiftlogo from '../../assets/swiftlogo.png';
 import search from '../../assets/Nav items.png';
 import divider from '../../assets/Divider.png';
+import { Flex, Text, Icon, HStack } from '@chakra-ui/react';
 
 function CustomNavbar() {
   return (
@@ -16,10 +19,12 @@ function CustomNavbar() {
     >
       <Container fluid>
         <Navbar.Brand href="#">
-          <span>
-            <img src={swiftlogo} alt="logo" className="logo" />
-            Swif<span className="drop">drop</span>
-          </span>
+          <Flex>
+            <img src={swiftlogo} alt="logo" className="logo" width={10} />
+            <Text mt="2">
+              Swif<span>drop</span>
+            </Text>
+          </Flex>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -41,11 +46,20 @@ function CustomNavbar() {
               Feature
             </Nav.Link>
           </Nav>
-          <div className="d-flex">
-            <img src={search} alt="" style={{ marginRight: '10px' }} />
-            <img src={divider} alt="" style={{ marginRight: '10px' }} />
-            <button style={{ marginRight: '10px' }}>Get started</button>
-          </div>
+          <HStack spacing={3}>
+            <SearchIcon w="50px" fontSize="3rem" color="#4caf50" />
+            <img src={divider} alt="" />
+            <Button
+              bg="#4caf50"
+              color="black"
+              _hover={{ bg: '#4caf50' }}
+              type="submit"
+              w="50%"
+              borderRadius="10"
+            >
+              Get started
+            </Button>
+          </HStack>
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -17,6 +17,33 @@
 align-items: center;
 }
 
+
+/* Style the carousel indicators */
+.custom-carousel ol.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-carousel ol.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4caf50; /* Default color for inactive indicators */
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.custom-carousel ol.carousel-indicators .active {
+  background-color: #4caf50; /* Color for active indicator */
+}
+
+
 @media screen and (max-width: 768px){
   .custom-navbar{
     padding: 5px 20px;

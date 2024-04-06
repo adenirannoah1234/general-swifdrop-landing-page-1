@@ -5,7 +5,16 @@ import Hero2 from '../hero2/Hero2';
 import Hero3 from '../hero3/Hero3';
 const CustomCarousel = () => {
   return (
-    <Carousel>
+    <Carousel
+      className="custom-carousel"
+      indicators={true}
+      prevIcon={
+        <span style={{ color: '#4caf50', fontSize: '50px' }}>&lt;</span>
+      }
+      nextIcon={
+        <span style={{ color: '#4caf50', fontSize: '50px' }}>&gt;</span>
+      }
+    >
       <Carousel.Item>
         <Hero1 />
       </Carousel.Item>
