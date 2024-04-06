@@ -1,4 +1,4 @@
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import { SearchIcon } from '@chakra-ui/icons';
@@ -8,19 +8,25 @@ import Navbar from 'react-bootstrap/Navbar';
 import swiftlogo from '../../assets/swiftlogo.png';
 import search from '../../assets/Nav items.png';
 import divider from '../../assets/Divider.png';
-import { Flex, Text, Icon, HStack } from '@chakra-ui/react';
+import { Flex, Text, Icon, HStack, Button } from '@chakra-ui/react';
 
 function CustomNavbar() {
   return (
     <Navbar
       expand="lg"
-      style={{ backgroundColor: '#dbffdc', padding: '5px 50px' }}
+      style={{ backgroundColor: '#dbffdc', padding: '5px 20px' }}
       className="custom-navbar"
     >
       <Container fluid>
         <Navbar.Brand href="#">
           <Flex>
-            <img src={swiftlogo} alt="logo" className="logo" width={10} />
+            <img
+              src={swiftlogo}
+              alt="logo"
+              className="logo"
+              width={5}
+              height={5}
+            />
             <Text mt="2">
               Swif<span>drop</span>
             </Text>
@@ -46,18 +52,20 @@ function CustomNavbar() {
               Feature
             </Nav.Link>
           </Nav>
-          <HStack spacing={3}>
-            <SearchIcon w="50px" fontSize="3rem" color="#4caf50" />
+          <HStack spacing={7}>
+            <SearchIcon w="50px" fontSize="2rem" color="#4caf50" />
             <img src={divider} alt="" />
             <Button
               bg="#4caf50"
-              color="black"
+              color="white"
               _hover={{ bg: '#4caf50' }}
-              type="submit"
+              // type="submit"
+              py="1.5rem"
               w="50%"
-              borderRadius="10"
+              borderRadius="5"
+              px="1.5rem"
             >
-              Get started
+              Learn More
             </Button>
           </HStack>
         </Navbar.Collapse>

@@ -40,7 +40,8 @@ const Hero3 = () => {
           <HStack
             as={'form'}
             border={'2px solid #4caf50'}
-            w="400px"
+            // w="400px"
+            width={{ base: '370px', md: '400px' }}
             px="5"
             borderRadius="12"
           >
@@ -77,7 +78,7 @@ const Hero3 = () => {
             <ChakraLink
               as={RouterLink}
               // to="/about"
-              color="blue.500"
+              color="#4caf50"
               textDecoration="underline"
             >
               Want to be a swift rider?
@@ -85,7 +86,7 @@ const Hero3 = () => {
             <ChakraLink
               as={RouterLink}
               // to="/about"
-              color="blue.500"
+              color="#4caf50"
               textDecoration="underline"
             >
               Register your Restaurant

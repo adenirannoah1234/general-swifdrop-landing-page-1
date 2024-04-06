@@ -6,6 +6,7 @@ import Hero2 from '../heros/hero2/Hero2';
 import About from '../about/About';
 import Services from '../services/Services';
 import Download from '../download/Download';
+import Partner from '../partner/Partner';
 // import Hero3 from '../heros/hero3/Hero3';
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <About />
       <Services />
       <Download />
+      <Partner />
       {/* <Hero1 /> */}
       {/* <Hero2 /> */}
       {/* <Hero3 /> */}
