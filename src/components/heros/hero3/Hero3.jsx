@@ -74,7 +74,7 @@ const Hero3 = () => {
               Submit
             </Button>
           </HStack>
-          <HStack spacing="15">
+          <HStack spacing="15" mt="4">
             <ChakraLink
               as={RouterLink}
               // to="/about"
