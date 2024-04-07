@@ -1,76 +1,128 @@
-// import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import { SearchIcon } from '@chakra-ui/icons';
-
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React, { useState } from 'react';
+import {
+  Flex,
+  Text,
+  Icon,
+  HStack,
+  Button,
+  Image,
+  Box,
+  Container,
+  useBreakpointValue,
+} from '@chakra-ui/react';
+import { SearchIcon, CloseIcon } from '@chakra-ui/icons';
 import swiftlogo from '../../assets/swiftlogo.png';
-import search from '../../assets/Nav items.png';
 import divider from '../../assets/Divider.png';
-import { Flex, Text, Icon, HStack, Button } from '@chakra-ui/react';
+import Home from '../../../public/Home.png';
+import About from '../../../public/About.png';
+import { Link as ChakraLink } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 
 function CustomNavbar() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
+  const columnDirection = useBreakpointValue({ base: 'column', md: 'row' });
+  const menuAlign = showMenu ? 'flex-start' : 'space-between';
+  const isSmallScreen = useBreakpointValue({ base: true, md: false });
+
   return (
-    <Navbar
-      expand="lg"
-      style={{ backgroundColor: '#dbffdc', padding: '5px 20px' }}
-      className="custom-navbar"
+    <Flex
+      as="nav"
+      align="center"
+      justify="space-between"
+      wrap="wrap"
+      w="100%"
+      p={5}
+      bg="#dbffdc"
+      color="#4caf50"
     >
-      <Container fluid>
-        <Navbar.Brand href="#">
-          <Flex>
-            <img
-              src={swiftlogo}
-              alt="logo"
-              className="logo"
-              width={5}
-              height={5}
-            />
-            <Text mt="2">
-              Swif<span>drop</span>
-            </Text>
-          </Flex>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="mx-auto my-2 my-lg-0 justify-content-center"
-            style={{ maxHeight: '300px' }}
-            navbarScroll
+      {/* Logo and Menu Toggle */}
+      <Flex align="center">
+        <Image src={swiftlogo} alt="logo" className="logo" w={10} />
+        <Text ml={2}>
+          Swif<span>drop</span>
+        </Text>
+      </Flex>
+
+      {/* Hamburger Icon */}
+      <Box
+        display={{ base: 'block', md: 'none' }}
+        onClick={toggleMenu}
+        bg="white"
+      >
+        {showMenu ? (
+          <CloseIcon fill="#4caf50" w="24px" h="24px" />
+        ) : (
+          <svg
+            fill="#4caf50"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            width="24px"
+            height="24px"
           >
-            <Nav.Link href="#action1" style={{ marginRight: '20px' }}>
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        )}
+      </Box>
+
+      {/* Menu Items */}
+      <Box
+        display={{ base: showMenu ? 'block' : 'none', md: 'flex' }}
+        width={{ base: '100%', md: 'auto' }}
+        mt={{ base: '2', md: '0' }}
+        // alignItems="center"
+        alignItems={{ base: 'flex-start', md: 'center' }} // Adjusted here
+        justifyContent={{ base: 'flex-start', md: 'center' }}
+        flexGrow={1}
+        bg={isSmallScreen ? 'white' : 'transparent'} // Set background color to white on small screens
+      >
+        <HStack spacing={4} flexDirection={columnDirection}>
+          <HStack>
+            {isSmallScreen && <Icon as={Home} w={10} h={10} />}
+            <ChakraLink as={RouterLink} color="black">
               Home
-            </Nav.Link>
-            <Nav.Link href="#action2" style={{ marginRight: '20px' }}>
-              Services
-            </Nav.Link>
-            <Nav.Link href="#action3" style={{ marginRight: '20px' }}>
-              About
-            </Nav.Link>
-            <Nav.Link href="#action4" style={{ marginRight: '20px' }}>
-              Feature
-            </Nav.Link>
-          </Nav>
-          <HStack spacing={7}>
-            <SearchIcon w="50px" fontSize="2rem" color="#4caf50" />
-            <img src={divider} alt="" />
-            <Button
-              bg="#4caf50"
-              color="white"
-              _hover={{ bg: '#4caf50' }}
-              // type="submit"
-              py="1.5rem"
-              w="50%"
-              borderRadius="5"
-              px="1.5rem"
-            >
-              Learn More
-            </Button>
+            </ChakraLink>
           </HStack>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          <HStack>
+            {isSmallScreen && <Icon as={About} w={10} h={10} />}
+            <ChakraLink as={RouterLink} color="black">
+              Services
+            </ChakraLink>
+          </HStack>
+
+          <ChakraLink as={RouterLink} color="black">
+            About
+          </ChakraLink>
+          <ChakraLink as={RouterLink} color="black">
+            Feature
+          </ChakraLink>
+        </HStack>
+      </Box>
+
+      {/* Additional Actions */}
+      {!isSmallScreen && (
+        <HStack spacing={7}>
+          <SearchIcon w="50px" fontSize="2rem" color="#4caf50" />
+          <Image src={divider} alt="" />
+          <Button
+            bg="#4caf50"
+            color="white"
+            _hover={{ bg: '#4caf50' }}
+            py="1.5rem"
+            w="50%"
+            borderRadius="5"
+            px="1.5rem"
+          >
+            Learn More
+          </Button>
+        </HStack>
+      )}
+    </Flex>
   );
 }
 

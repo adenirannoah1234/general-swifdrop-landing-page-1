@@ -15,21 +15,36 @@ const Download = () => {
 
   return (
     <VStack p={{ base: '10', md: '10' }} bg="#dbffdc">
-      <VStack>
-        <Text fontWeight="700" fontSize={{ base: '2.1rem', md: '2.5rem' }}>
-          Download SwifDrop
-        </Text>
-        <Text fontWeight="400" fontSize={{ base: '0.9rem', md: '1.125rem' }}>
-          Enjoy swift deliveries on anything you order!
-        </Text>
-      </VStack>
-
       <Flex justify="center" direction={{ base: 'column', md: 'row' }}>
+        <VStack display={{ md: 'none', base: 'flex' }}>
+          <Text fontWeight="700" fontSize={{ base: '2.1rem', md: '2.5rem' }}>
+            Download SwifDrop
+          </Text>
+          <Text fontWeight="400" fontSize={{ base: '0.9rem', md: '1.125rem' }}>
+            Enjoy swift deliveries on anything you order!
+          </Text>
+        </VStack>
         <Image src={iphone} alt="" w="527px" />
-        <HStack spacing={10} mt={{ base: '10', md: '0' }} justify="center">
-          <Image src={App} alt="" width={{ base: '170px', md: '200px' }} />
-          <Image src={play} alt="" width={{ base: '170px', md: '200px' }} />
-        </HStack>
+        {/* show at smaller screen sizes dont show at smaller screen sizes at all */}
+
+        <VStack mt={'14'}>
+          {/* dont show at smaller screen show only md */}
+          <VStack display={{ base: 'none', md: 'flex' }}>
+            <Text fontWeight="700" fontSize={{ base: '2.1rem', md: '2.5rem' }}>
+              Download SwifDrop
+            </Text>
+            <Text
+              fontWeight="400"
+              fontSize={{ base: '0.9rem', md: '1.125rem' }}
+            >
+              Enjoy swift deliveries on anything you order!
+            </Text>
+          </VStack>
+          <HStack spacing={10} mt={{ base: '10', md: '14' }} justify="center">
+            <Image src={App} alt="" width={{ base: '170px', md: '200px' }} />
+            <Image src={play} alt="" width={{ base: '170px', md: '200px' }} />
+          </HStack>
+        </VStack>
       </Flex>
     </VStack>
   );

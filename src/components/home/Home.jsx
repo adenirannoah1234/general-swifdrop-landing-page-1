@@ -7,6 +7,7 @@ import About from '../about/About';
 import Services from '../services/Services';
 import Download from '../download/Download';
 import Partner from '../partner/Partner';
+import Footer from '../footer/Footer';
 // import Hero3 from '../heros/hero3/Hero3';
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Services />
       <Download />
       <Partner />
+      <Footer />
       {/* <Hero1 /> */}
       {/* <Hero2 /> */}
       {/* <Hero3 /> */}

@@ -23,7 +23,7 @@ const Partner = () => {
       <HStack flexDirection={columnDirection} mt="5" justify="center">
         <VStack>
           <Text
-            fontSize={{ base: '0.7rem', md: '1.9rem' }}
+            fontSize={{ base: '0.9rem', md: '1.9rem' }}
             fontWeight={500}
             // textAlign="center"
           >

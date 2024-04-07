@@ -42,7 +42,7 @@ const Hero3 = () => {
             border={'2px solid #4caf50'}
             // w="400px"
             width={{ base: '370px', md: '400px' }}
-            px="5"
+            px={{ base: '0', md: '5' }}
             borderRadius="12"
           >
             <Input
