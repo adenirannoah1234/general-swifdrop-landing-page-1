@@ -1,5 +1,14 @@
 import React from 'react';
-import { HStack, VStack, Flex, Text, Image, Box } from '@chakra-ui/react';
+import {
+  HStack,
+  VStack,
+  Flex,
+  Text,
+  Image,
+  Box,
+  Divider,
+  useBreakpointValue,
+} from '@chakra-ui/react';
 import { Link as ChakraLink } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -10,13 +19,16 @@ import Telegram from '../../../public/Telegram.png';
 import Instagram from '../../../public/Instagram.png';
 
 const Footer = () => {
+  const columnDirection = useBreakpointValue({ base: 'column', md: 'row' });
+
   return (
     <Flex
       justifyContent="space-between"
       bg="#002c02"
-      px={{ base: '20', md: '50' }}
-      py={{ base: '10', md: '35' }}
+      px={{ base: '5', md: '50' }}
+      py={{ base: '5', md: '35' }}
       color="white"
+      flexDirection={columnDirection}
     >
       <VStack>
         <VStack>
@@ -28,35 +40,55 @@ const Footer = () => {
           </HStack>
           <Text>Swifdrop gives you the best of food in a flash!</Text>
         </VStack>
-        <VStack>
-          <HStack mr="150px">
-            <Image src={Facebook} w="10" h="10" />
-            <Image src={Twitter} w="10" h="10" />
-            <Image src={Telegram} w="10" h="10" />
-            <Image src={Instagram} w="10" h="10" />
+        <VStack display={{ base: 'none', md: 'flex' }} spacing="3">
+          <HStack mr="150px" spacing="3">
+            <Image src={Facebook} w="8" h="8" />
+            <Image src={Twitter} w="8" h="8" />
+            <Image src={Telegram} w="8" h="8" />
+            <Image src={Instagram} w="8" h="8" />
           </HStack>
-          <Text>© Copyright 2024, All Rights Reserved by SwifDrop</Text>
+          <Text color="#708870" display={{ base: 'none', md: 'flex' }}>
+            © Copyright 2024, All Rights Reserved by SwifDrop
+          </Text>
         </VStack>
       </VStack>
       <HStack spacing="20">
         <VStack>
-          <Text>LINKS</Text>
+          <Text textDecoration="underline" color="#216624">
+            LINKS
+          </Text>
           <ChakraLink as={RouterLink}>About Us</ChakraLink>
           <ChakraLink as={RouterLink}>FAQ</ChakraLink>
           <ChakraLink as={RouterLink}>Services</ChakraLink>
         </VStack>
         <VStack>
-          <Text>LINKS</Text>
+          <Text textDecoration="underline" color="#216624">
+            POLICY
+          </Text>
           <ChakraLink as={RouterLink}>Features</ChakraLink>
           <ChakraLink as={RouterLink}>Privacy</ChakraLink>
           <ChakraLink as={RouterLink}>Terms of use</ChakraLink>
         </VStack>
-        <VStack>
-          <Text>LINKS</Text>
+        <VStack mb="8">
+          <Text textDecoration="underline" color="#216624">
+            HELP
+          </Text>
           <ChakraLink as={RouterLink}>Contact Us</ChakraLink>
           <ChakraLink as={RouterLink}>Career</ChakraLink>
         </VStack>
       </HStack>
+      <Divider display={{ base: 'flex', md: 'none' }} />
+      <VStack display={{ md: 'none', base: 'flex' }}>
+        <HStack mr="150px" spacing="3">
+          <Image src={Facebook} w="8" h="8" />
+          <Image src={Twitter} w="8" h="8" />
+          <Image src={Telegram} w="8" h="8" />
+          <Image src={Instagram} w="8" h="8" />
+        </HStack>
+        <Text color="#708870">
+          © Copyright 2024, All Rights Reserved by SwifDrop
+        </Text>
+      </VStack>
     </Flex>
   );
 };
