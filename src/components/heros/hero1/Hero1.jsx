@@ -12,6 +12,8 @@ import {
   Input,
   HStack,
   VStack,
+  Spacer,
+  Image,
 } from '@chakra-ui/react';
 
 const Hero1 = () => {
@@ -95,7 +97,7 @@ const Hero1 = () => {
           </HStack>
         </VStack>
       </Box>
-      <img src={image1} alt="" width={400} />
+      <Image src={image1} alt="" width={400} mt={{ base: '10', md: '0' }} />
     </Flex>
   );
 };

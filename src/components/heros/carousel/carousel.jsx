@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Hero1 from '../hero1/Hero1';
 import Hero2 from '../hero2/Hero2';
 import Hero3 from '../hero3/Hero3';
+import Hero4 from '../hero4/Hero4';
 const CustomCarousel = () => {
   return (
     <Carousel
@@ -23,6 +24,9 @@ const CustomCarousel = () => {
       </Carousel.Item>
       <Carousel.Item>
         <Hero3 />
+      </Carousel.Item>
+      <Carousel.Item>
+        <Hero4 />
       </Carousel.Item>
     </Carousel>
   );

@@ -15,6 +15,7 @@ import swiftlogo from '../../assets/swiftlogo.png';
 import divider from '../../assets/Divider.png';
 import Home from '../../../public/Home.png';
 import About from '../../../public/About.png';
+import Services from '../../../public/Services.png';
 import { Link as ChakraLink } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -37,6 +38,7 @@ function CustomNavbar() {
       wrap="wrap"
       w="100%"
       p={5}
+      // backgroundColor={{ md: '#dbffdc', base: 'white' }}
       bg="#dbffdc"
       color="#4caf50"
     >
@@ -52,7 +54,7 @@ function CustomNavbar() {
       <Box
         display={{ base: 'block', md: 'none' }}
         onClick={toggleMenu}
-        bg="white"
+        // bg="white"
       >
         {showMenu ? (
           <CloseIcon fill="#4caf50" w="24px" h="24px" />
@@ -73,13 +75,14 @@ function CustomNavbar() {
       {/* Menu Items */}
       <Box
         display={{ base: showMenu ? 'block' : 'none', md: 'flex' }}
-        width={{ base: '100%', md: 'auto' }}
+        w="100%"
+        h="100%"
         mt={{ base: '2', md: '0' }}
         // alignItems="center"
         alignItems={{ base: 'flex-start', md: 'center' }} // Adjusted here
         justifyContent={{ base: 'flex-start', md: 'center' }}
         flexGrow={1}
-        bg={isSmallScreen ? 'white' : 'transparent'} // Set background color to white on small screens
+        bg={isSmallScreen ? 'white' : 'transparent'}
       >
         <HStack spacing={4} flexDirection={columnDirection}>
           <HStack>
@@ -89,7 +92,7 @@ function CustomNavbar() {
             </ChakraLink>
           </HStack>
           <HStack>
-            {isSmallScreen && <Icon as={About} w={10} h={10} />}
+            {isSmallScreen && <Icon as={Services} w={10} h={10} />}
             <ChakraLink as={RouterLink} color="black">
               Services
             </ChakraLink>

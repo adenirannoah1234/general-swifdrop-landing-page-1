@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import burger from '../../../assets/burger.png';
+import image1 from '../../../assets/image1.png';
 import {
   Button,
   Text,
@@ -9,13 +9,12 @@ import {
   Input,
   VStack,
   HStack,
-  Spacer,
   Image,
 } from '@chakra-ui/react';
 import { Link as ChakraLink } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
-const Hero2 = () => {
+const Hero4 = () => {
   return (
     <Flex
       align="center"
@@ -96,9 +95,9 @@ const Hero2 = () => {
           </HStack>
         </VStack>
       </Box>
-      <Image src={burger} alt="" width={400} mt={{ base: '10', md: '0' }} />
+      <Image src={image1} alt="" width={400} mt={{ base: '10', md: '0' }} />
     </Flex>
   );
 };
 
-export default Hero2;
+export default Hero4;

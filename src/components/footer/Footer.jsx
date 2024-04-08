@@ -31,7 +31,7 @@ const Footer = () => {
       flexDirection={columnDirection}
     >
       <VStack>
-        <VStack>
+        <VStack mr={{ md: '0', base: '40px' }}>
           <HStack mr="160px" spacing="5">
             <Image src={swift} w="50" />
             <Text fontSize="1.5rem" mt="3">
@@ -52,7 +52,7 @@ const Footer = () => {
           </Text>
         </VStack>
       </VStack>
-      <HStack spacing={{ base: '7', md: '20' }}>
+      <HStack spacing={{ base: '7', md: '20' }} mt={{ base: '5', md: '0' }}>
         <VStack>
           <Text textDecoration="underline" color="#216624">
             LINKS
@@ -78,7 +78,11 @@ const Footer = () => {
         </VStack>
       </HStack>
       <Divider display={{ base: 'flex', md: 'none' }} />
-      <VStack display={{ md: 'none', base: 'flex' }}>
+      <VStack
+        display={{ md: 'none', base: 'flex' }}
+        mt={{ base: '4', md: '0' }}
+        spacing="5"
+      >
         <HStack mr={{ base: '175px', md: '150px' }} spacing="5">
           <Image src={Facebook} w="8" h="8" />
           <Image src={Twitter} w="8" h="8" />
