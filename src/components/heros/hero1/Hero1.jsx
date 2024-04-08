@@ -20,6 +20,7 @@ const Hero1 = () => {
       align="center"
       direction={{ base: 'column', md: 'row' }}
       p={{ base: '20', md: '55' }}
+      justifyContent="space-between"
     >
       <Box>
         <Text

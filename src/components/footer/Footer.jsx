@@ -32,7 +32,7 @@ const Footer = () => {
     >
       <VStack>
         <VStack>
-          <HStack mr="160px">
+          <HStack mr="160px" spacing="5">
             <Image src={swift} w="50" />
             <Text fontSize="1.5rem" mt="3">
               Swifdrop
@@ -41,7 +41,7 @@ const Footer = () => {
           <Text>Swifdrop gives you the best of food in a flash!</Text>
         </VStack>
         <VStack display={{ base: 'none', md: 'flex' }} spacing="3">
-          <HStack mr="150px" spacing="3">
+          <HStack mr={{ md: '150px', base: '330px' }} spacing="3">
             <Image src={Facebook} w="8" h="8" />
             <Image src={Twitter} w="8" h="8" />
             <Image src={Telegram} w="8" h="8" />
@@ -52,7 +52,7 @@ const Footer = () => {
           </Text>
         </VStack>
       </VStack>
-      <HStack spacing="20">
+      <HStack spacing={{ base: '7', md: '20' }}>
         <VStack>
           <Text textDecoration="underline" color="#216624">
             LINKS
@@ -79,15 +79,13 @@ const Footer = () => {
       </HStack>
       <Divider display={{ base: 'flex', md: 'none' }} />
       <VStack display={{ md: 'none', base: 'flex' }}>
-        <HStack mr="150px" spacing="3">
+        <HStack mr={{ base: '175px', md: '150px' }} spacing="5">
           <Image src={Facebook} w="8" h="8" />
           <Image src={Twitter} w="8" h="8" />
           <Image src={Telegram} w="8" h="8" />
           <Image src={Instagram} w="8" h="8" />
         </HStack>
-        <Text color="#708870">
-          © Copyright 2024, All Rights Reserved by SwifDrop
-        </Text>
+        <Text>© Copyright 2024, All Rights Reserved by SwifDrop</Text>
       </VStack>
     </Flex>
   );

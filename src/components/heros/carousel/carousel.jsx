@@ -7,13 +7,13 @@ const CustomCarousel = () => {
   return (
     <Carousel
       className="custom-carousel"
-      indicators={true}
-      prevIcon={
-        <span style={{ color: '#4caf50', fontSize: '50px' }}>&lt;</span>
-      }
-      nextIcon={
-        <span style={{ color: '#4caf50', fontSize: '50px' }}>&gt;</span>
-      }
+      indicators={false}
+      // prevIcon={
+      //   <span style={{ color: '#4caf50', fontSize: '50px' }}>&lt;</span>
+      // }
+      // nextIcon={
+      //   <span style={{ color: '#4caf50', fontSize: '50px' }}>&gt;</span>
+      // }
     >
       <Carousel.Item>
         <Hero1 />
