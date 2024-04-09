@@ -36,26 +36,21 @@ function CustomNavbar() {
       align="center"
       justify="space-between"
       wrap="wrap"
-      w="100%"
+      maxW="100%"
       p={5}
-      // backgroundColor={{ md: '#dbffdc', base: 'white' }}
       bg="#dbffdc"
       color="#4caf50"
     >
       {/* Logo and Menu Toggle */}
       <Flex align="center">
         <Image src={swiftlogo} alt="logo" className="logo" w={10} />
-        <Text ml={2}>
+        <Text ml={2} fontSize="1.25rem">
           Swif<span>drop</span>
         </Text>
       </Flex>
 
       {/* Hamburger Icon */}
-      <Box
-        display={{ base: 'block', md: 'none' }}
-        onClick={toggleMenu}
-        // bg="white"
-      >
+      <Box display={{ base: 'block', md: 'none' }} onClick={toggleMenu}>
         {showMenu ? (
           <CloseIcon fill="#4caf50" w="24px" h="24px" />
         ) : (
@@ -75,8 +70,8 @@ function CustomNavbar() {
       {/* Menu Items */}
       <Box
         display={{ base: showMenu ? 'block' : 'none', md: 'flex' }}
-        w="100%"
-        h="100%"
+        w={{ md: 'auto', base: '100%' }}
+        // h="100%"
         mt={{ base: '2', md: '0' }}
         // alignItems="center"
         alignItems={{ base: 'flex-start', md: 'center' }} // Adjusted here
