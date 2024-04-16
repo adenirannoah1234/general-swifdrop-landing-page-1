@@ -27,6 +27,7 @@ const Hero3 = () => {
           fontSize={{ base: '1.5rem', md: '3.3rem' }}
           textAlign="center"
           mb="7"
+          fontFamily="Pacifico, cursive"
         >
           <span style={{ color: '#4caf50' }}>Delicious</span> Deliveries,
           Delivered to your <span style={{ color: '#4caf50' }}>Doorstep!</span>
@@ -95,7 +96,7 @@ const Hero3 = () => {
           </HStack>
         </VStack>
       </Box>
-      <Image src={image1} alt="" width={400} mt={{ base: '10', md: '0' }} />
+      <Image src="/rice.png" alt="" width={400} mt={{ base: '10', md: '0' }} />
     </Flex>
   );
 };

@@ -17,10 +17,10 @@ const Download = () => {
     <VStack p={{ base: '10', md: '10' }} bg="#dbffdc">
       <Flex justify="center" direction={{ base: 'column', md: 'row' }}>
         <VStack display={{ md: 'none', base: 'flex' }}>
-          <Text fontWeight="700" fontSize={{ base: '2.1rem', md: '2.5rem' }}>
+          <Text fontWeight="700" fontSize={{ base: '1.5rem', md: '2.5rem' }}>
             Download SwifDrop
           </Text>
-          <Text fontWeight="400" fontSize={{ base: '0.9rem', md: '1.125rem' }}>
+          <Text fontWeight="400" fontSize={{ base: '0.7rem', md: '1.125rem' }}>
             Enjoy swift deliveries on anything you order!
           </Text>
         </VStack>
@@ -35,14 +35,14 @@ const Download = () => {
             </Text>
             <Text
               fontWeight="400"
-              fontSize={{ base: '0.9rem', md: '1.125rem' }}
+              fontSize={{ base: '0.7rem', md: '1.125rem' }}
             >
               Enjoy swift deliveries on anything you order!
             </Text>
           </VStack>
           <HStack spacing={10} mt={{ base: '10', md: '14' }} justify="center">
-            <Image src={App} alt="" width={{ base: '170px', md: '200px' }} />
-            <Image src={play} alt="" width={{ base: '170px', md: '200px' }} />
+            <Image src={App} alt="" width={{ base: '120px', md: '200px' }} />
+            <Image src={play} alt="" width={{ base: '120px', md: '200px' }} />
           </HStack>
         </VStack>
       </Flex>

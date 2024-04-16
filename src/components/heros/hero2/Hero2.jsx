@@ -28,6 +28,7 @@ const Hero2 = () => {
           fontSize={{ base: '1.5rem', md: '3.3rem' }}
           textAlign="center"
           mb="7"
+          fontFamily="Pacifico, cursive"
         >
           <span style={{ color: '#4caf50' }}>Delicious</span> Deliveries,
           Delivered to your <span style={{ color: '#4caf50' }}>Doorstep!</span>

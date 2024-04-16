@@ -12,13 +12,13 @@ import Footer from '../footer/Footer';
 const Home = () => {
   return (
     <div>
-      <CustomNavbar />
+      {/* <CustomNavbar /> */}
       <CustomCarousel />
       <About />
       <Services />
       <Download />
       <Partner />
-      <Footer />
+      {/* <Footer /> */}
       {/* <Hero1 /> */}
       {/* <Hero2 /> */}
       {/* <Hero3 /> */}

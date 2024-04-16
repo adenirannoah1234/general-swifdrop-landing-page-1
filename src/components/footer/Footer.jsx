@@ -34,11 +34,16 @@ const Footer = () => {
         <VStack mr={{ md: '0', base: '40px' }}>
           <HStack mr="160px" spacing="5">
             <Image src={swift} w="50" />
-            <Text fontSize="1.5rem" mt="3">
+            <Text fontSize={{ md: '1.5rem', base: '1.2rem' }} mt="3">
               Swifdrop
             </Text>
           </HStack>
-          <Text>Swifdrop gives you the best of food in a flash!</Text>
+          <Text
+            fontSize={{ md: '16px', base: '12px' }}
+            mr={{ base: '30px', md: '0' }}
+          >
+            Swifdrop gives you the best of food in a flash!
+          </Text>
         </VStack>
         <VStack display={{ base: 'none', md: 'flex' }} spacing="3">
           <HStack mr={{ md: '150px', base: '330px' }} spacing="3">
@@ -52,44 +57,64 @@ const Footer = () => {
           </Text>
         </VStack>
       </VStack>
-      <HStack spacing={{ base: '7', md: '20' }} mt={{ base: '5', md: '0' }}>
+      <HStack spacing={{ base: '10', md: '20' }} mt={{ base: '5', md: '0' }}>
         <VStack>
           <Text textDecoration="underline" color="#216624">
             LINKS
           </Text>
-          <ChakraLink as={RouterLink}>About Us</ChakraLink>
-          <ChakraLink as={RouterLink}>FAQ</ChakraLink>
-          <ChakraLink as={RouterLink}>Services</ChakraLink>
+          <ChakraLink as={RouterLink} to="/About">
+            About Us
+          </ChakraLink>
+          <ChakraLink as={RouterLink} to="/Faq">
+            FAQ
+          </ChakraLink>
+          <ChakraLink as={RouterLink} to="/services">
+            Services
+          </ChakraLink>
         </VStack>
         <VStack>
           <Text textDecoration="underline" color="#216624">
             POLICY
           </Text>
-          <ChakraLink as={RouterLink}>Features</ChakraLink>
-          <ChakraLink as={RouterLink}>Privacy</ChakraLink>
-          <ChakraLink as={RouterLink}>Terms of use</ChakraLink>
+          <ChakraLink as={RouterLink} to="/Features">
+            Features
+          </ChakraLink>
+          <ChakraLink as={RouterLink} to="/Privacy">
+            Privacy
+          </ChakraLink>
+          <ChakraLink as={RouterLink} to="/Terms">
+            Terms of use
+          </ChakraLink>
         </VStack>
         <VStack mb="8">
           <Text textDecoration="underline" color="#216624">
             HELP
           </Text>
           <ChakraLink as={RouterLink}>Contact Us</ChakraLink>
-          <ChakraLink as={RouterLink}>Career</ChakraLink>
+          <ChakraLink as={RouterLink} to="/Career">
+            Career
+          </ChakraLink>
         </VStack>
       </HStack>
       <Divider display={{ base: 'flex', md: 'none' }} />
       <VStack
         display={{ md: 'none', base: 'flex' }}
         mt={{ base: '4', md: '0' }}
+        // mr={{ base: '100px', md: '150px' }}
         spacing="5"
       >
-        <HStack mr={{ base: '175px', md: '150px' }} spacing="5">
+        <HStack spacing="5" mr={{ base: '120px', md: '150px' }}>
           <Image src={Facebook} w="8" h="8" />
           <Image src={Twitter} w="8" h="8" />
           <Image src={Telegram} w="8" h="8" />
           <Image src={Instagram} w="8" h="8" />
         </HStack>
-        <Text>© Copyright 2024, All Rights Reserved by SwifDrop</Text>
+        <Text
+          fontSize={{ md: '0', base: '12px' }}
+          mr={{ base: '40px', md: '0' }}
+        >
+          © Copyright 2024, All Rights Reserved by SwifDrop
+        </Text>
       </VStack>
     </Flex>
   );

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import image1 from '../../../assets/image1.png';
 import {
   Button,
   Text,
@@ -27,6 +25,7 @@ const Hero4 = () => {
           fontSize={{ base: '1.5rem', md: '3.3rem' }}
           textAlign="center"
           mb="7"
+          fontFamily="Pacifico, cursive"
         >
           <span style={{ color: '#4caf50' }}>Delicious</span> Deliveries,
           Delivered to your <span style={{ color: '#4caf50' }}>Doorstep!</span>
@@ -95,7 +94,7 @@ const Hero4 = () => {
           </HStack>
         </VStack>
       </Box>
-      <Image src={image1} alt="" width={400} mt={{ base: '10', md: '0' }} />
+      <Image src="/phone.png" alt="" width={400} mt={{ base: '10', md: '0' }} />
     </Flex>
   );
 };

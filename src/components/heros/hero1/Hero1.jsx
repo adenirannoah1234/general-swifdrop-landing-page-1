@@ -24,12 +24,13 @@ const Hero1 = () => {
       p={{ base: '20', md: '55' }}
       justifyContent="space-between"
     >
-      <Box>
+      <Box maxW="737px">
         <Text
           as="h1"
           fontSize={{ base: '1.5rem', md: '3.3rem' }}
           textAlign="center"
           mb="7"
+          fontFamily="Pacifico, cursive" // Specify the desired font family here
         >
           <span style={{ color: '#4caf50' }}>Delicious</span> Deliveries,
           Delivered to your <span style={{ color: '#4caf50' }}>Doorstep!</span>

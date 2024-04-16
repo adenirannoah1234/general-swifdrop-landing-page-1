@@ -82,21 +82,21 @@ function CustomNavbar() {
         <HStack spacing={4} flexDirection={columnDirection}>
           <HStack>
             {isSmallScreen && <Icon as={Home} w={10} h={10} />}
-            <ChakraLink as={RouterLink} color="black">
+            <ChakraLink as={RouterLink} color="black" to="/">
               Home
             </ChakraLink>
           </HStack>
           <HStack>
             {isSmallScreen && <Icon as={Services} w={10} h={10} />}
-            <ChakraLink as={RouterLink} color="black">
+            <ChakraLink as={RouterLink} color="black" to="/services">
               Services
             </ChakraLink>
           </HStack>
 
-          <ChakraLink as={RouterLink} color="black">
+          <ChakraLink as={RouterLink} color="black" to="/About">
             About
           </ChakraLink>
-          <ChakraLink as={RouterLink} color="black">
+          <ChakraLink as={RouterLink} color="black" to="/Features">
             Feature
           </ChakraLink>
         </HStack>

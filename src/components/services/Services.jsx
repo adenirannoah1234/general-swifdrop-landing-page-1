@@ -12,10 +12,10 @@ const Services = () => {
   const columnDirection = useBreakpointValue({ base: 'column', md: 'row' });
 
   return (
-    <VStack p={{ base: '10', md: '55' }}>
+    <VStack p={{ base: '0', md: '55' }}>
       <Heading fontSize="3rem">Our Services</Heading>
       <HStack HStack spacing="9" flexDirection={columnDirection}>
-        <VStack spacing="5">
+        <VStack spacing="5" p={{ md: '0', base: '10' }}>
           <img src={Restaurant} alt="" />
           <Text as="h1" textAlign="center" fontSize="1.5rem">
             Register your restaurant
@@ -35,7 +35,11 @@ const Services = () => {
             Register your store
           </Button>
         </VStack>
-        <VStack spacing="5">
+        <VStack
+          spacing="5"
+          backgroundColor={{ md: 'white', base: '#dbffdc' }}
+          p={{ md: '0', base: '10' }}
+        >
           <img src={Restaurant} alt="" />
           <Text as="h1" textAlign="center" fontSize="1.5rem">
             Register your restaurant
@@ -55,7 +59,7 @@ const Services = () => {
             Start earning
           </Button>
         </VStack>
-        <VStack spacing="5">
+        <VStack spacing="5" p={{ md: '0', base: '10' }}>
           <img src={Restaurant} alt="" />
           <Text as="h1" textAlign="center" fontSize="1.5rem">
             Register your restaurant
