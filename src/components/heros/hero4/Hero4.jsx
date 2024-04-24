@@ -20,6 +20,7 @@ const Hero4 = () => {
       direction={{ base: 'column', md: 'row' }}
       justifyContent="space-between"
       spacing="4"
+      mt={12}
     >
       <Box>
         <Text
@@ -101,7 +102,7 @@ const Hero4 = () => {
       <Image
         src="/phone.png"
         alt=""
-        width={400}
+        width={350}
         mt={{ base: '10', md: '0' }}
         ml="7"
       />

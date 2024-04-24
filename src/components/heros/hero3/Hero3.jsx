@@ -20,6 +20,7 @@ const Hero3 = () => {
       align="center"
       p={{ base: '20', md: '55' }}
       direction={{ base: 'column', md: 'row' }}
+      mt={10}
     >
       <Box>
         <Text

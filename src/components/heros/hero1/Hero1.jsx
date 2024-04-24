@@ -23,6 +23,7 @@ const Hero1 = () => {
       direction={{ base: 'column', md: 'row' }}
       p={{ base: '20', md: '55' }}
       justifyContent="space-between"
+      mt={10}
     >
       <Box maxW="737px">
         <Text
