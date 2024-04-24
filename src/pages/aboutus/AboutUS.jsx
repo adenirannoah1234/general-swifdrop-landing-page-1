@@ -13,7 +13,7 @@ const AboutUS = () => {
           platform that brings together local restaurants, passionate riders,
           and discerning food lovers
         </Text>
-        <Text>Our Mission:</Text>
+        <Text fontSize="1.25rem">Our Mission:</Text>
         <Text>
           Our mission is simple yet powerful—to empower local businesses, enable
           flexible opportunities for gig workers, and delight customers with
@@ -66,7 +66,7 @@ const AboutUS = () => {
             share a passion for great food and meaningful connections.{' '}
           </ListItem>
         </List>
-        <Text>Join Us:</Text>
+        <Text fontSize="1.25rem">Join Us:</Text>
         <Text>
           Whether you're a hungry diner looking for your next delicious meal, a
           local restaurant eager to expand your reach, or a rider seeking
