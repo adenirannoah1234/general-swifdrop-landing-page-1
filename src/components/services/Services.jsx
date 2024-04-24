@@ -8,6 +8,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 import Restaurant from '../../../public/Restaurant.png';
+import { Link } from 'react-router-dom';
 const Services = () => {
   const columnDirection = useBreakpointValue({ base: 'column', md: 'row' });
 
@@ -31,6 +32,8 @@ const Services = () => {
             w="80%"
             py="1.5rem"
             borderRadius="20"
+            as={Link}
+            to="https://new-swift.vercel.app/"
           >
             Register your store
           </Button>
@@ -40,9 +43,9 @@ const Services = () => {
           backgroundColor={{ md: 'white', base: '#dbffdc' }}
           p={{ md: '0', base: '10' }}
         >
-          <img src={Restaurant} alt="" />
+          <img src="/Driver vector.png" alt="" />
           <Text as="h1" textAlign="center" fontSize="1.5rem">
-            Register your restaurant
+            Become our rider
           </Text>
           <Text textAlign="center">
             Indulge in flexibility, seize freedom, and earn competitively as you
@@ -60,9 +63,9 @@ const Services = () => {
           </Button>
         </VStack>
         <VStack spacing="5" p={{ md: '0', base: '10' }}>
-          <img src={Restaurant} alt="" />
+          <img src="/Group 70.png" alt="" />
           <Text as="h1" textAlign="center" fontSize="1.5rem">
-            Register your restaurant
+            Career
           </Text>
           <Text textAlign="center">
             Want to be part of us and contribute to the amazing work we’re doing

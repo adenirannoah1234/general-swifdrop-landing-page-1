@@ -27,10 +27,10 @@ const Hero1 = () => {
       <Box maxW="737px">
         <Text
           as="h1"
-          fontSize={{ base: '1.5rem', md: '3.3rem' }}
+          fontSize={{ base: '1.5rem', md: '3.4rem' }}
           textAlign="center"
           mb="7"
-          fontFamily="Pacifico, cursive" // Specify the desired font family here
+          fontFamily="Pacifico, cursive"
         >
           <span style={{ color: '#4caf50' }}>Delicious</span> Deliveries,
           Delivered to your <span style={{ color: '#4caf50' }}>Doorstep!</span>
@@ -45,7 +45,7 @@ const Hero1 = () => {
             as={'form'}
             border={'2px solid #4caf50'}
             // w="400px"
-            width={{ base: '370px', md: '400px' }}
+            width={{ base: '303px', md: '400px' }}
             px={{ base: '0', md: '5' }}
             borderRadius="12"
           >
@@ -57,11 +57,11 @@ const Hero1 = () => {
               focusBorderColor="transparent"
               name="text"
               py="1.5rem"
-              px="1rem"
+              px="0.7rem"
               w="100%"
               sx={{
                 '::placeholder': {
-                  fontSize: '14px',
+                  fontSize: '12px',
                   color: '#4caf50',
                 },
               }}
@@ -84,14 +84,16 @@ const Hero1 = () => {
               // to="/about"
               color="#4caf50"
               textDecoration="underline"
+              fontSize={{ base: '13px', md: '16px' }}
             >
               Want to be a swift rider?
             </ChakraLink>
             <ChakraLink
               as={RouterLink}
-              // to="/about"
+              to="https://new-swift.vercel.app/"
               color="#4caf50"
               textDecoration="underline"
+              fontSize={{ base: '13px', md: '16px' }}
             >
               Register your Restaurant
             </ChakraLink>

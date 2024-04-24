@@ -4,7 +4,7 @@ const Features = () => {
   return (
     <Box>
       <Image src="/featuresh.png" h={150} w={1440} />
-      <Box p="50px">
+      <Box p={{ md: '50px', base: '25' }}>
         <Text mb={4} fontSize="1.125rem">
           SwifDrop Features:{' '}
         </Text>

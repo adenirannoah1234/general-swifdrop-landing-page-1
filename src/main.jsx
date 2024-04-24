@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
+import 'react-image-crop/dist/ReactCrop.css';
 import { ChakraProvider } from '@chakra-ui/react';
 
 class ErrorBoundary extends React.Component {

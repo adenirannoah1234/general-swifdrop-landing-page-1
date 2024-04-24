@@ -16,13 +16,15 @@ const Hero4 = () => {
   return (
     <Flex
       align="center"
-      p={{ base: '20', md: '55' }}
+      p={{ base: '20', md: '50' }}
       direction={{ base: 'column', md: 'row' }}
+      justifyContent="space-between"
+      spacing="4"
     >
       <Box>
         <Text
           as="h1"
-          fontSize={{ base: '1.5rem', md: '3.3rem' }}
+          fontSize={{ base: '1.5rem', md: '3.4rem' }}
           textAlign="center"
           mb="7"
           fontFamily="Pacifico, cursive"
@@ -41,7 +43,7 @@ const Hero4 = () => {
             as={'form'}
             border={'2px solid #4caf50'}
             // w="400px"
-            width={{ base: '370px', md: '400px' }}
+            width={{ base: '303px', md: '400px' }}
             px={{ base: '0', md: '5' }}
             borderRadius="12"
           >
@@ -53,11 +55,11 @@ const Hero4 = () => {
               focusBorderColor="transparent"
               name="text"
               py="1.5rem"
-              px="1rem"
+              px="0.7rem"
               w="100%"
               sx={{
                 '::placeholder': {
-                  fontSize: '14px',
+                  fontSize: '12px',
                   color: '#4caf50',
                 },
               }}
@@ -80,21 +82,29 @@ const Hero4 = () => {
               // to="/about"
               color="#4caf50"
               textDecoration="underline"
+              fontSize={{ base: '13px', md: '16px' }}
             >
               Want to be a swift rider?
             </ChakraLink>
             <ChakraLink
               as={RouterLink}
-              // to="/about"
+              to="https://new-swift.vercel.app/"
               color="#4caf50"
               textDecoration="underline"
+              fontSize={{ base: '13px', md: '16px' }}
             >
               Register your Restaurant
             </ChakraLink>
           </HStack>
         </VStack>
       </Box>
-      <Image src="/phone.png" alt="" width={400} mt={{ base: '10', md: '0' }} />
+      <Image
+        src="/phone.png"
+        alt=""
+        width={400}
+        mt={{ base: '10', md: '0' }}
+        ml="7"
+      />
     </Flex>
   );
 };

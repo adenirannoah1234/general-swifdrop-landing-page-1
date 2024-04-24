@@ -3,10 +3,14 @@ import { Image, Text, VStack, Box, ListItem, List } from '@chakra-ui/react';
 
 const Service = () => {
   return (
-    <VStack>
+    <VStack mt={10}>
       <Image src="/service.png" h={150} w={1440} />
-      <Box p="50px">
-        <Text fontSize="1.25rem" fontWeight="400" lineHeight="1.5">
+      <Box p={{ md: '50px', base: '20px' }}>
+        <Text
+          fontSize={{ md: '1.25rem', base: '1rem' }}
+          fontWeight="400"
+          lineHeight="1.5"
+        >
           <span style={{ marginLeft: '20px' }}>S</span>wifdrop is your ultimate
           destination for seamless food delivery, connecting local restaurants
           directly to your doorstep. With our innovative platform, users can

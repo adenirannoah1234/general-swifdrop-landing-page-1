@@ -4,7 +4,7 @@ const Privacy = () => {
   return (
     <Box>
       <Image src="/privacy.png" h={150} w={1440} />
-      <Box p="50px">
+      <Box p={{ md: '50px', base: '25' }}>
         <Text>
           At SwifDrop, we are committed to protecting the privacy and security
           of our users. This Privacy Policy outlines how we collect, use,

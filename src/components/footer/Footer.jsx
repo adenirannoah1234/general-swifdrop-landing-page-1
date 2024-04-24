@@ -11,8 +11,6 @@ import {
 } from '@chakra-ui/react';
 import { Link as ChakraLink } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
-
-import swift from '../../assets/swiftlogo.png';
 import Facebook from '../../../public/Facebook.png';
 import Twitter from '../../../public/Twitter.png';
 import Telegram from '../../../public/Telegram.png';
@@ -33,7 +31,7 @@ const Footer = () => {
       <VStack>
         <VStack mr={{ md: '0', base: '40px' }}>
           <HStack mr="160px" spacing="5">
-            <Image src={swift} w="50" />
+            <Image src="/swiftlogo.png" w="50" />
             <Text fontSize={{ md: '1.5rem', base: '1.2rem' }} mt="3">
               Swifdrop
             </Text>

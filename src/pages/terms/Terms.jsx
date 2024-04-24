@@ -5,7 +5,7 @@ const Terms = () => {
   return (
     <Box>
       <Image src="/terms.png" w={1440} h={150} />
-      <Box p="50px">
+      <Box p={{ md: '50px', base: '25' }}>
         <Text>
           Welcome to SwifDrop! These Terms of Use ("Terms") govern your use of
           the SwifDrop website, mobile application, and services ("SwifDrop").

@@ -2,33 +2,22 @@ import React, { useState } from 'react';
 import {
   Flex,
   Text,
-  Icon,
+  IconButton,
   HStack,
   Button,
   Image,
   Box,
-  Container,
   useBreakpointValue,
 } from '@chakra-ui/react';
-import { SearchIcon, CloseIcon } from '@chakra-ui/icons';
-import swiftlogo from '../../assets/swiftlogo.png';
-import divider from '../../assets/Divider.png';
-import Home from '../../../public/Home.png';
-import About from '../../../public/About.png';
-import Services from '../../../public/Services.png';
+import { HamburgerIcon, CloseIcon, SearchIcon } from '@chakra-ui/icons';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { Link as ChakraLink } from '@chakra-ui/react';
-import { Link as RouterLink } from 'react-router-dom';
+const CustomNavbar = () => {
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
-function CustomNavbar() {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
-  const columnDirection = useBreakpointValue({ base: 'column', md: 'row' });
-  const menuAlign = showMenu ? 'flex-start' : 'space-between';
-  const isSmallScreen = useBreakpointValue({ base: true, md: false });
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <Flex
@@ -36,92 +25,135 @@ function CustomNavbar() {
       align="center"
       justify="space-between"
       wrap="wrap"
-      maxW="100%"
-      p={5}
-      bg="#dbffdc"
+      px={{ md: '4', base: '0' }}
+      bg={{ md: '#dbffdc' }}
       color="#4caf50"
+      position="fixed"
+      top={0}
+      left={0}
+      right={0}
+      zIndex={999}
     >
-      {/* Logo and Menu Toggle */}
-      <Flex align="center">
-        <Image src={swiftlogo} alt="logo" className="logo" w={10} />
-        <Text ml={2} fontSize="1.25rem">
-          Swif<span>drop</span>
-        </Text>
-      </Flex>
-
-      {/* Hamburger Icon */}
-      <Box display={{ base: 'block', md: 'none' }} onClick={toggleMenu}>
-        {showMenu ? (
-          <CloseIcon fill="#4caf50" w="24px" h="24px" />
-        ) : (
-          <svg
-            fill="#4caf50"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            width="24px"
-            height="24px"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        )}
-      </Box>
-
-      {/* Menu Items */}
-      <Box
-        display={{ base: showMenu ? 'block' : 'none', md: 'flex' }}
-        w={{ md: 'auto', base: '100%' }}
-        // h="100%"
-        mt={{ base: '2', md: '0' }}
-        // alignItems="center"
-        alignItems={{ base: 'flex-start', md: 'center' }} // Adjusted here
-        justifyContent={{ base: 'flex-start', md: 'center' }}
-        flexGrow={1}
-        bg={isSmallScreen ? 'white' : 'transparent'}
+      <Flex
+        bg="#dbffdc"
+        p={2}
+        borderRadius="md"
+        display="flex"
+        alignItems="center"
+        justify="space-between"
+        width={{ md: 'auto', base: '100%' }}
       >
-        <HStack spacing={4} flexDirection={columnDirection}>
-          <HStack>
-            {isSmallScreen && <Icon as={Home} w={10} h={10} />}
-            <ChakraLink as={RouterLink} color="black" to="/">
+        <Flex>
+          <Image src="/swiftlogo.png" alt="Logo" w={12} h={12} />
+          <Text fontSize="xl" fontWeight="bold" mt={2} ml={3}>
+            Swiftdrop
+          </Text>
+        </Flex>
+        {isMobile && (
+          <IconButton
+            aria-label="Toggle Menu"
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            variant="ghost"
+            onClick={toggleMenu}
+            fontSize="1.875rem"
+          />
+        )}
+      </Flex>
+      <Box
+        display={{ base: isOpen ? 'block' : 'none', md: 'flex' }}
+        mt={{ base: isOpen ? 4 : 0, md: 0 }}
+        bg={{ base: isOpen ? 'white' : 'inherit', md: 'inherit' }}
+        p={{ base: isOpen ? 4 : 0, md: 0 }}
+        borderRadius={{ base: isOpen ? 'md' : 'none', md: 'none' }}
+        flexGrow={1}
+      >
+        <HStack
+          spacing={6}
+          justify={{ md: 'center', base: 'flex-start' }}
+          align={{ md: 'center', base: 'flex-start' }}
+          w="100%"
+          flexDirection={{ base: 'column', md: 'row' }}
+        >
+          <HStack spacing={4}>
+            <Image
+              src="/Home.png"
+              display={{ md: 'none', base: 'flex' }}
+              w={10}
+            />
+            <ChakraLink
+              as={RouterLink}
+              color={location.pathname === '/' ? '#4caf50' : 'black'}
+              to="/"
+              fontWeight="700"
+            >
               Home
             </ChakraLink>
           </HStack>
-          <HStack>
-            {isSmallScreen && <Icon as={Services} w={10} h={10} />}
-            <ChakraLink as={RouterLink} color="black" to="/services">
+
+          <HStack spacing={4}>
+            <Image
+              src="/Services.png"
+              display={{ md: 'none', base: 'flex' }}
+              w={10}
+            />
+            <ChakraLink
+              as={RouterLink}
+              color={location.pathname === '/services' ? '#4caf50' : 'black'}
+              to="/services"
+              fontWeight="700"
+            >
               Services
             </ChakraLink>
           </HStack>
 
-          <ChakraLink as={RouterLink} color="black" to="/About">
-            About
-          </ChakraLink>
-          <ChakraLink as={RouterLink} color="black" to="/Features">
-            Feature
-          </ChakraLink>
+          <HStack spacing={4}>
+            <Image
+              src="/About.png"
+              display={{ md: 'none', base: 'flex' }}
+              w={10}
+            />
+            <ChakraLink
+              as={RouterLink}
+              color={location.pathname === '/about' ? '#4caf50' : 'black'}
+              to="/about"
+              fontWeight="700"
+            >
+              About
+            </ChakraLink>
+          </HStack>
+          <HStack spacing={4}>
+            <Image
+              src="/Features.png"
+              display={{ md: 'none', base: 'flex' }}
+              w={10}
+            />
+            <ChakraLink
+              as={RouterLink}
+              color={location.pathname === '/features' ? '#4caf50' : 'black'}
+              to="/features"
+              fontWeight="700"
+            >
+              Feature
+            </ChakraLink>
+          </HStack>
         </HStack>
       </Box>
-
-      {/* Additional Actions */}
-      {!isSmallScreen && (
-        <HStack spacing={7}>
-          <SearchIcon w="50px" fontSize="2rem" color="#4caf50" />
-          <Image src={divider} alt="" />
-          <Button
-            bg="#4caf50"
-            color="white"
-            _hover={{ bg: '#4caf50' }}
-            py="1.5rem"
-            w="50%"
-            borderRadius="5"
-            px="1.5rem"
-          >
-            Learn More
-          </Button>
-        </HStack>
-      )}
+      <HStack spacing={4} display={{ md: 'flex', base: 'none' }}>
+        <SearchIcon w={6} h={6} />
+        <img src="/Divider.png" alt="" />
+        <Button
+          bg="#4caf50"
+          color="white"
+          _hover={{ bg: '#4caf50' }}
+          py={2}
+          px={4}
+          borderRadius="md"
+        >
+          Learn More
+        </Button>
+      </HStack>
     </Flex>
   );
-}
+};
 
 export default CustomNavbar;

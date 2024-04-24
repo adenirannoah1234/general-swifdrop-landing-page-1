@@ -3,9 +3,9 @@ import { Image, Text, VStack, Box, ListItem, List } from '@chakra-ui/react';
 
 const AboutUS = () => {
   return (
-    <Box>
+    <Box mt={10}>
       <Image src="/aboutheading.png" h={150} w={1440} />
-      <Box p="50px">
+      <Box p={{ md: '50px', base: '20' }}>
         <Text>
           At SwifDrop, we believe in connecting people through the joy of food.
           Founded with a vision to revolutionize the way communities experience
