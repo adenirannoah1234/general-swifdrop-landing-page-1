@@ -2,9 +2,9 @@ import React from 'react';
 import { Image, Text, VStack, Box, ListItem, List } from '@chakra-ui/react';
 const Features = () => {
   return (
-    <Box>
+    <Box mt={10}>
       <Image src="/featuresh.png" h={150} w={1440} />
-      <Box p={{ md: '50px', base: '25' }}>
+      <Box p={{ md: '50px', base: '25px' }}>
         <Text mb={4} fontSize="1.125rem">
           SwifDrop Features:{' '}
         </Text>

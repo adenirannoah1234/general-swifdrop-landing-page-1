@@ -5,7 +5,7 @@ const AboutUS = () => {
   return (
     <Box mt={10}>
       <Image src="/aboutheading.png" h={150} w={1440} />
-      <Box p={{ md: '50px', base: '20' }}>
+      <Box p={{ md: '50px', base: '20px' }}>
         <Text>
           At SwifDrop, we believe in connecting people through the joy of food.
           Founded with a vision to revolutionize the way communities experience
