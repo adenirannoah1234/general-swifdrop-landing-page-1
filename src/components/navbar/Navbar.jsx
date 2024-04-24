@@ -45,8 +45,8 @@ const CustomNavbar = () => {
       >
         <Flex>
           <Image src="/swiftlogo.png" alt="Logo" w={12} h={12} />
-          <Text fontSize="xl" fontWeight="bold" mt={2} ml={3}>
-            Swiftdrop
+          <Text fontSize="xl" fontWeight="bold" mt={2} ml={3} color="black">
+            Swif<span style={{ color: '#4caf50' }}>drop</span>
           </Text>
         </Flex>
         {isMobile && (
