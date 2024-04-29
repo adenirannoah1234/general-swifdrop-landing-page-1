@@ -3,7 +3,7 @@ import { Image, VStack, Box, Input, Button, HStack } from '@chakra-ui/react';
 
 const Career = () => {
   return (
-    <Box>
+    <Box mt={10}>
       <Image src="/career.png" w={1440} h={150} />
       <VStack py="50px">
         <Image src="/bro.png" width={{ md: 'auto', base: '90%' }} />

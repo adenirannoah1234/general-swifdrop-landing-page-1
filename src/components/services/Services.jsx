@@ -58,6 +58,8 @@ const Services = () => {
             w="80%"
             py="1.5rem"
             borderRadius="20"
+            as={Link}
+            to="https://drivers-landing-page.vercel.app/"
           >
             Start earning
           </Button>

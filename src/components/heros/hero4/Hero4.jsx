@@ -80,7 +80,7 @@ const Hero4 = () => {
           <HStack spacing="15" mt="4">
             <ChakraLink
               as={RouterLink}
-              // to="/about"
+              to="https://drivers-landing-page.vercel.app/"
               color="#4caf50"
               textDecoration="underline"
               fontSize={{ base: '13px', md: '16px' }}

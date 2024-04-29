@@ -3,7 +3,7 @@ import { Image, Text, VStack, Box, ListItem, List } from '@chakra-ui/react';
 
 const Terms = () => {
   return (
-    <Box>
+    <Box mt={10}>
       <Image src="/terms.png" w={1440} h={150} />
       <Box p={{ md: '50px', base: '25' }}>
         <Text>
