@@ -79,7 +79,7 @@ const Faq = () => {
   };
 
   return (
-    <Accordion allowToggle p={{ md: '50px', base: '30px' }} mt={10}>
+    <Accordion allowToggle p={{ md: '50px', base: '30px' }} mt={20}>
       {accordionData.map((item, index) => (
         <AccordionItem
           key={`${item.heading}_${index}`}
