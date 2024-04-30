@@ -33,6 +33,7 @@ const Services = () => {
             py="1.5rem"
             borderRadius="20"
             as={Link}
+            target="_blank"
             to="https://new-swift.vercel.app/"
           >
             Register your store
@@ -59,6 +60,7 @@ const Services = () => {
             py="1.5rem"
             borderRadius="20"
             as={Link}
+            target="_blank"
             to="https://drivers-landing-page.vercel.app/"
           >
             Start earning
