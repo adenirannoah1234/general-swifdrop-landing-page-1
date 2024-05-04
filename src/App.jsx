@@ -12,7 +12,7 @@ import Terms from './pages/terms/Terms';
 import Career from './pages/career/Career';
 import Faq from './pages/faq/Faq';
 import 'react-image-crop/dist/ReactCrop.css';
-import ParentComponent from './upload/Parent';
+// import ParentComponent from './components/';
 // import CustomNavbar from './components/navbar/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -30,7 +30,8 @@ function App() {
           <Route path="/Terms" element={<Terms />} />
           <Route path="/Career" element={<Career />} />
           <Route path="/Faq" element={<Faq />} />
-          <Route path="/ParentComponent" element={<ParentComponent />} />
+          {/* <Route path="/ParentComponent" element={<ParentComponent />} /> */}
+          
         </Routes>
         <Footer />
       </BrowserRouter>
